@@ -5,6 +5,7 @@ import logger from './src/utils/logger.js';
 import connectDB from './src/startup/db.js';
 import loggerConfig from './src/middleware/loggerConfig.js';
 import corsPrefs from './src/middleware/corsPrefs.js';
+import routes from './src/startup/routes.js';
 
 dotenv.config();
 connectDB();
@@ -17,6 +18,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(loggerConfig);
+
+routes(app);
 
 const PORT = process.env.PORT || 3000;
 
