@@ -40,7 +40,7 @@ const bookSchema = new Schema({
   }]
 });
 
-const Book = model('Book', bookSchema);
+const Books = model('Books', bookSchema);
 
 const validateBook = (data) => {
   const schema = Joi.object({
@@ -60,4 +60,4 @@ const validateBook = (data) => {
 };
 
 
-export { Book, validateBook };
+export { Books, validateBook };

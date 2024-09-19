@@ -1,13 +1,12 @@
 import jwt from 'jsonwebtoken';
-import { getErrorResponse } from '../utils/response.js';
+import { sendErrorResponse } from '../utils/response.js';
 
 const verifyToken = (req, res, next) => {
-  const authHeader = req.headers['Authorization'];
+  const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
-
   if (!token) {
-    return res.status(400).json(getErrorResponse("Token not found"));
+    return sendErrorResponse(res, "Access denied, Token required");
   }
 
   const verified = jwt.verify(token, process.env.JWT_SECRET);

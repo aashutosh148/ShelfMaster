@@ -1,16 +1,12 @@
-function getErrorResponse(message) {
-  return {
-    success: false,
-    statusCode: 404,
+function sendErrorResponse(res, message) {
+  return res.status(400).json({
     message
-  };
+  }) ;
 }
-function getSuccessResponse(message, data) {
-  return {
-    sucess: true,
-    statusCode: 200,
+function sendSuccessResponse(res, message, data) {
+  return res.status(200).json({
     message,
     data
-  };
+  });
 }
-export { getErrorResponse, getSuccessResponse };
+export { sendErrorResponse, sendSuccessResponse };
