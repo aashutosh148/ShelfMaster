@@ -10,7 +10,7 @@
     "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "aashutosh148",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^9.10.0",
