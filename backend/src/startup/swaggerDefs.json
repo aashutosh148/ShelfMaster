@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000/api",
+      "url": "https://shelfmaster.onrender.com/api",
       "description": "Development server"
     }
   ],
@@ -220,7 +220,7 @@
         }
       }
     },
-    "/users/{id}": {
+    "/user/{id}": {
       "get": {
         "tags": [
           "User"
@@ -355,7 +355,7 @@
         }
       }
     },
-    "/users/addStaff": {
+    "/user/addStaff": {
       "post": {
         "tags": [
           "User"
