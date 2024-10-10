@@ -18,5 +18,7 @@ const validateNotification = (data) => {
   return schema.validate(data);
 };
 
+const Notification = model('Notification', NotificationSchema);
+
 export { validateNotification, Notification };
 
